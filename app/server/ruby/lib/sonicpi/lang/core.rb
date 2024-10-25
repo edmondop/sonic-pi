@@ -2325,7 +2325,7 @@ play 80      # This is *never* played as the program is trapped in the loop abov
 
                 # immediately reset for the next move
                 __system_thread_locals.set_local :sonic_pi_local_live_loop_move_to_bus_and_parent_t, nil
-
+              end
               if new_bus
                 moved_prom = __system_thread_locals.get :sonic_pi_local_spider_thread_moved
                 ack_prom = __system_thread_locals.get :sonic_pi_local_spider_thread_moved_ack
@@ -2348,7 +2348,6 @@ play 80      # This is *never* played as the program is trapped in the loop abov
               end
               __live_loop_cue name if __system_thread_locals.get :sonic_pi_local_live_loop_auto_cue
               res = send(ll_name, res)
-            end
             end
           end
         end
