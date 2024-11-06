@@ -3669,11 +3669,11 @@ print rand_i_look(5) # will print either 0, 1, 2, 3, or 4 to the output pane"
 
 You can see the 'buckets' that the numbers between 0 and 1 fall into with the following code:
 
-        rand_type :white
+        use_random_source :white
         puts 10000.times.collect { rand.round(1) }.tally.sort
-        rand_type :pink
+        use_random_source :pink
         puts 10000.times.collect { rand.round(1) }.tally.sort
-        rand_type :perlin
+        use_random_source :perlin
         puts 10000.times.collect { rand.round(1) }.tally.sort
 
       ",
