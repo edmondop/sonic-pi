@@ -27,10 +27,6 @@
 #include <api/scope_exit.h>
 #include <api/sonicpi_api.h>
 
-#ifndef __APPLE__
-#include <crossguid/guid.hpp>
-#endif
-
 using namespace std::chrono;
 using namespace oscpkt;
 

@@ -87,22 +87,18 @@ endif()
 
 # Windows
 if ("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
-find_package(crossguid CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
-        crossguid
     )
 endif()
 
 # Linux
 if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
-find_package(crossguid CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME}
     PUBLIC
         stdc++fs
         rt
     PRIVATE
-        crossguid
     )
 endif()
 
